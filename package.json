@@ -1,0 +1,25 @@
+{
+  "name": "be-record-1-melaniesilies",
+  "version": "1.0.0",
+  "description": "This file lists the changes that need to be made in each stage. It is ordered in reverse chronological order, meaning that the last changes made will always be on top of the file, so that readers will not have to scroll all the way down with each task added.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fbw-d09/be-record-1-MelanieSilies.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/fbw-d09/be-record-1-MelanieSilies/issues"
+  },
+  "homepage": "https://github.com/fbw-d09/be-record-1-MelanieSilies#readme",
+  "dependencies": {
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "lowdb": "^1.0.0"
+  }
+}
