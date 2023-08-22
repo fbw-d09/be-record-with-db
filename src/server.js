@@ -15,8 +15,10 @@ const app = express();
 
 
 /** MIDDLEWARE */
+// external middleware
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
+//  own middleware
 app.use(setCors);
 
 
