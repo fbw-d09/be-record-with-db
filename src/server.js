@@ -5,8 +5,8 @@ const bodyParser = require('body-parser')
 
 
 /** IMPORTS */
-const recordsRouter = require("./src/routes/records");
-const { setCors } = require("./src/middlewares/cors");
+const recordsRouter = require("./routes/records");
+const { setCors } = require("./middlewares/cors");
 
 
 /** VARIABLES */
