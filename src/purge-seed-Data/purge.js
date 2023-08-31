@@ -8,7 +8,7 @@ const Record = require("../models/Record");
 const db = mongoose
   .connect(`${process.env.DB_URL}/${process.env.DB_NAME}`)
   .then(() => console.log("connected to db"))
-  .catch((err) => console.log("something went wrong", err.reason));
+  .catch((err) => console.log("something went wrong", err.message));
 
 const purgeFakeData = async () => {
   try {
