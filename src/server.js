@@ -2,6 +2,8 @@
 require('dotenv').config();
 const express = require('express');
 const bodyParser = require('body-parser')
+const mongoose = require('mongoose');
+
 
 
 /** IMPORTS */
@@ -12,6 +14,12 @@ const { setCors } = require("./middlewares/cors");
 /** VARIABLES */
 const port = process.env.PORT || 8000
 const app = express();
+
+/**CONNECT TO DB */
+const db = mongoose.connect(`${process.env.DB_URL}/${process.env.DB_NAME}`)
+    .then(() => console.log("connected to db"))
+    .catch((err) => console.log("something went wrong", err.reason))
+
 
 
 /** MIDDLEWARE */
