@@ -1,19 +1,17 @@
 const express = require("express");
 const router = express.Router();
 
+const { getRecords, getRecord, deleteRecord, addRecord } = require("../controllers/recordsController");
+const { recordValidationPostRules } = require("../validation/recordRules");
 
-const {getRecords, getRecord, deleteRecord, addRecord, updateRecord} = require("../controllers/recordsController");
 
 
-router
-  .route("/")
+router.route("/")
   .get(getRecords)
-  .post(addRecord);
+  .post(recordValidationPostRules, addRecord);
 
-router
-  .route("/:id")
+router.route("/:id")
   .get(getRecord)
-  .delete(deleteRecord)
-  .put(updateRecord)
+  .delete(deleteRecord);
 
 module.exports = router;
